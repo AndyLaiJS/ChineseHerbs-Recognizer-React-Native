@@ -1,16 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import Header from './components/Header';
-import FileButton from './components/FileButton';
 
 const App = () => {
-  const fileHandler = stuff => {
-    console.log(stuff);
-  };
   return (
     <View style={styles.container}>
-      <Header />
-      <FileButton onFile={fileHandler} />
+      <Text style={styles.text}>Hello World</Text>
     </View>
   );
 };
