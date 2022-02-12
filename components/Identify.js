@@ -3,15 +3,24 @@ import {Image, View, Text, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native';
 
 const Identify = props => {
+  const resetHandler = () => {
+    props.onReset();
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.pad}>
         <Image source={{uri: props.fileUri}} style={styles.img} />
       </View>
-      <Text style={styles.text}>YEET</Text>
+      <Text style={styles.label}>YEET</Text>
       <Text style={styles.content}>
         REEEEEEEEREEEEEEEEREEEEEEEEREEEEEEEEREEEEEEEE
       </Text>
+      <TouchableOpacity
+        style={[styles.button, styles.blackShadow]}
+        onPress={resetHandler}>
+        <Text style={styles.text}>Identify Next</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -21,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: -100,
+    // marginTop: -100,
   },
   pad: {
     borderRadius: 1000 / 2,
@@ -33,7 +42,7 @@ const styles = StyleSheet.create({
     height: 250,
     borderRadius: 1000 / 2,
   },
-  text: {
+  label: {
     color: 'black',
     padding: 10,
     fontSize: 30,
@@ -42,6 +51,27 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 15,
     width: 325,
+  },
+  button: {
+    margin: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 150,
+    height: 50,
+    borderRadius: 20,
+    backgroundColor: '#ffe4f3',
+  },
+  blackShadow: {
+    shadowColor: 'rgb(255, 61, 169)',
+    shadowOffset: {width: 4, height: 4},
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 5,
+  },
+
+  text: {
+    color: '#FF4689',
+    fontWeight: '500',
   },
 });
 

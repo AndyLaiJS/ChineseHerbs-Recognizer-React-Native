@@ -10,11 +10,16 @@ const App = () => {
   const fileHandler = stuff => {
     setFileUri(stuff);
   };
+
+  const resetHandler = () => {
+    setFileUri(null);
+  };
+
   return (
     <View style={styles.container}>
       <Header />
       {fileUri ? (
-        <Identify fileUri={fileUri} />
+        <Identify fileUri={fileUri} onReset={resetHandler} />
       ) : (
         <FileButton onFile={fileHandler} />
       )}
