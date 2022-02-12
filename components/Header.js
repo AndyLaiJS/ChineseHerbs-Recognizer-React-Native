@@ -32,18 +32,19 @@ const styles = StyleSheet.create({
     backgroundPosition: 'center',
     backgroundClip: 'text',
     textFillColor: 'transparent',
+    marginTop: 50,
   },
   h1: {
     color: 'black',
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 60,
   },
   h2: {
     color: 'black',
     textAlign: 'center',
-    fontSize: 15,
-    fontWeight: '200',
+    fontSize: 20,
+    fontWeight: '300',
   },
 });
 
