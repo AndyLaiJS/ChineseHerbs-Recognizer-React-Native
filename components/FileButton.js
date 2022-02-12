@@ -37,7 +37,7 @@ const FileButton = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={lCamera}>
+      <TouchableOpacity onPress={lCamera} style={styles.pad}>
         {fileUri ? (
           <Image source={{uri: fileUri}} style={styles.logo} />
         ) : (
@@ -53,11 +53,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: -150,
+  },
+  pad: {
+    borderRadius: 1000 / 2,
+    borderColor: 'black',
+    borderWidth: 20,
+    padding: 50,
   },
   logo: {
     width: 200,
     height: 200,
-    borderRadius: 1000 / 2,
+    // borderRadius: 1000 / 2,
   },
   text: {
     color: 'black',
