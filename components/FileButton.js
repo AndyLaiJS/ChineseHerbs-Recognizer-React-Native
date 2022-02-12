@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {Image, View, Text, StyleSheet} from 'react-native';
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import {launchCamera} from 'react-native-image-picker';
 import {TouchableOpacity} from 'react-native';
-import Identify from './Identify';
 
 const FileButton = props => {
-  const [filePath, setFilePath] = useState(null);
-  const [fileData, setFileData] = useState(null);
   const [fileUri, setFileUri] = useState(null);
 
   const lCamera = () => {
@@ -26,11 +23,9 @@ const FileButton = props => {
         alert(response.customButton);
       } else {
         const source = {uri: response.assets[0].uri};
-        console.log(source);
+        // console.log(source);
         // console.log('response', JSON.stringify(response));
-        console.log(response.assets[0].uri);
-        setFilePath(response.assets[0]);
-        setFileData(response.assets[0].data);
+        // console.log(response.assets[0].uri);
         setFileUri(response.assets[0].uri);
       }
     });
