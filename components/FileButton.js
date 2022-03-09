@@ -41,7 +41,7 @@ const FileButton = props => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={lCamera} style={styles.pad}>
-        <Image source={require('../MHW2102.png')} style={styles.logo} />
+        <Image source={require('../MHW2102-H.png')} style={styles.logo} />
       </TouchableOpacity>
     </View>
   );
