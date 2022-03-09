@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Image, View, Text, StyleSheet} from 'react-native';
 import {launchCamera} from 'react-native-image-picker';
 import {TouchableOpacity} from 'react-native';
+import {LinearTextGradient} from 'react-native-text-gradient';
 
 const FileButton = props => {
   const [fileUri, setFileUri] = useState(null);
@@ -43,6 +44,14 @@ const FileButton = props => {
       <TouchableOpacity onPress={lCamera} style={styles.pad}>
         <Image source={require('../MHW2102-H.png')} style={styles.logo} />
       </TouchableOpacity>
+      <LinearTextGradient
+        style={styles.instruct}
+        locations={[0, 1]}
+        colors={['#ff4689', '#5200ff']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 0}}>
+        <Text>Touch the Herb above to begin</Text>
+      </LinearTextGradient>
     </View>
   );
 };
@@ -52,7 +61,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: -150,
+    marginTop: 0,
   },
   pad: {
     borderRadius: 1000 / 2,
@@ -71,6 +80,14 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'black',
+  },
+  instruct: {
+    fontSize: 20,
+    paddingTop: 50,
+    paddingBottom: 50,
+    fontWeight: '300',
+    textAlign: 'center',
+    alignItems: 'center',
   },
 });
 

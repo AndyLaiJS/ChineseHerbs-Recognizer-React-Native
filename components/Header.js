@@ -35,13 +35,11 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   h1: {
-    color: 'black',
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 60,
   },
   h2: {
-    color: 'black',
     textAlign: 'center',
     fontSize: 20,
     fontWeight: '300',

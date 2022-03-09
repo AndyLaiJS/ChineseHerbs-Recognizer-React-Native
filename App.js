@@ -3,7 +3,6 @@ import {View, Text, StyleSheet} from 'react-native';
 import Header from './components/Header';
 import FileButton from './components/FileButton';
 import Identify from './components/Identify';
-import axios from 'axios';
 
 const App = () => {
   const [fileUri, setFileUri] = useState(null);
