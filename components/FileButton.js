@@ -37,6 +37,10 @@ const FileButton = props => {
     if (fileUri) {
       props.onFile(fileUri);
     }
+    // cleanup function that runs during unmount
+    return () => {
+      setFileUri(null);
+    };
   }, [fileUri]);
 
   return (
