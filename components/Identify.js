@@ -12,7 +12,9 @@ const Identify = props => {
       <View style={styles.pad}>
         <Image source={{uri: props.fileUri}} style={styles.img} />
       </View>
-      <Text style={styles.label}>{props.content.label}</Text>
+      <Text style={styles.label}>
+        {props.content.label}/{props.content.cnlabel}
+      </Text>
       <Text style={styles.content}>{props.content.data}</Text>
       <TouchableOpacity
         style={[styles.button, styles.blackShadow]}
